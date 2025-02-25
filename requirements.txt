@@ -3,5 +3,5 @@ pandas
 plotly
 psycopg2-binary
 python-dotenv
-openai==1.64.0
-openpyxl==
+openai
+openpyxl
