@@ -2,9 +2,12 @@ import openai
 import os
 from dotenv import load_dotenv
 from ..database import get_db_connection
+try:
+    OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+except KeyError:
+    st.error("🚨 OpenAI API 키가 설정되지 않았습니다! Streamlit Cloud 'Secrets'에서 설정해주세요.")
+    st.stop()
 
-load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_basic_data(file_id, conn):
     cur = conn.cursor()
