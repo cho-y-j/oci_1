@@ -16,7 +16,12 @@ def main():
         page_icon="🏢",
         layout="wide"
     )
-
+    hide_streamlit_style = """
+        <style>
+            [data-testid="stSidebarNav"] { display: none; }  /* 자동 생성되는 기본 사이드바 숨김 */
+        </style>
+    """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     # CSS 스타일 적용
     st.markdown("""
         <style>
