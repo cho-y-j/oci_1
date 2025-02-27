@@ -201,7 +201,7 @@ def main():
                 st.session_state['page'] = 'analysis'
                 st.rerun()
         with col4:
-            if st.button("AI 종합분석 리포트 바로가기",
+            if st.button("AI 분석 리포트 바로가기",
                         key="comprehensive_btn",
                         help="AI 종합분석 리포트",
                         use_container_width=True):
